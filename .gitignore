@@ -1,0 +1,13 @@
+# Visual Studio
+.vs/
+# Visual Studio Solution
+*.sln
+# Visual Studio Project
+*.vcxproj
+*.vcxproj.user
+*.vcxproj.filters
+
+
+# Build and Binary
+bin/
+build/
