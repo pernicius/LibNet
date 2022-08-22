@@ -16,8 +16,8 @@ namespace Net {
 		Server();
 		~Server();
 
-		// Starts the server, listening on the specified port
-		bool Start(uint16_t port);
+		// Starts the server, listening on the specified port and optional address
+		bool Start(uint16_t port, const std::string& ip = {});
 
 		void Stop();
 
