@@ -1,7 +1,7 @@
 #include "Net/NetServer.h"
 
 
-enum MsgTypes : uint16_t
+enum MsgTypes : uint32_t
 {
 	None = 0,      // not allowed!
 
@@ -11,7 +11,7 @@ enum MsgTypes : uint16_t
 	MessageAll,    // client -> server
 	ServerMessage, // server -> client
 
-	Uninitialized = ((uint16_t)~((uint16_t)0))
+	Uninitialized = ((uint32_t)~((uint32_t)0))
 };
 
 
