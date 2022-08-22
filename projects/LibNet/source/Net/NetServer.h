@@ -26,13 +26,15 @@ namespace Net {
 		}
 
 
-		// Starts the server, listening on the specified port
-		bool Start(uint16_t port)
+		// Starts the server, listening on the specified port and optional address
+		bool Start(uint16_t port, const std::string& ip = {})
 		{
+			std::string addr;
 			try
 			{
 				// Setup asio acceptor
-				asio::ip::tcp::endpoint ep(asio::ip::tcp::v6(), port);
+				asio::ip::tcp::endpoint ep(ip.empty() ? asio::ip::address_v6::any() : asio::ip::address::from_string(ip), port);
+				addr = ep.address().to_string();
 				m_asioAcceptor.open(ep.protocol());
 				m_asioAcceptor.bind(ep);
 				m_asioAcceptor.listen();
@@ -54,7 +56,7 @@ namespace Net {
 			}
 			m_IsListening = true;
 			// Log
-			std::cout << "[SERVER] Started!" << std::endl;
+			std::cout << "[SERVER] Started, listening on: " << addr << " : " << port << std::endl;
 			return true;
 		}
 
