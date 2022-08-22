@@ -12,36 +12,13 @@ project "LibNet"
 	targetdir ("%{wks.location}/bin/"   .. outputdir)
 	objdir    ("%{wks.location}/build/" .. outputdir .. "/%{string.lower(prj.name)}")
 	
---	pchheader "pch.h"
---	pchsource "source/pch.cpp"
-
-
 	includedirs {
 		"source",
 		"%{wks.location}/vendor/asio-1.24.0/include",
-	}
-	
-	
-	links {
 	}
 
 
 	files {
 		"source/**.h",
-		"source/**.cpp"
+		"dummy.cpp"
 	}
-
-
-	filter "configurations:Debug"
-	
-		defines {
-		}
-	
-
-	filter "configurations:Release"
-		
-		defines {
-		}
-
-
-	filter {}
