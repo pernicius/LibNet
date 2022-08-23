@@ -22,3 +22,9 @@
 #include <asio.hpp>
 #include <asio/ts/buffer.hpp>
 #include <asio/ts/internet.hpp>
+
+
+// Set default namespace (can be set by application)
+#ifndef NETLIB_NAMESPACE
+#	define NETLIB_NAMESPACE Net
+#endif

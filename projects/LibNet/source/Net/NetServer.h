@@ -2,12 +2,12 @@
 
 #include "NetCommon.h"
 
-#include "Net/NetConnection.h"
-#include "Net/NetMessage.h"
-#include "Net/NetMsgQueue.h"
+#include "NetConnection.h"
+#include "NetMessage.h"
+#include "NetMsgQueue.h"
 
 
-namespace Net {
+namespace NETLIB_NAMESPACE {
 
 
 	class Server

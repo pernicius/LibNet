@@ -1,11 +1,11 @@
 #pragma once
 
-#include "Net/NetCommon.h"
+#include "NetCommon.h"
 
-//#include "Net/NetConnection.h"
+//#include "NetConnection.h"
 
 
-namespace Net {
+namespace NETLIB_NAMESPACE {
 
 
 	class Connection;

@@ -1,12 +1,12 @@
 #pragma once
 
-#include "Net/NetCommon.h"
+#include "NetCommon.h"
 
-#include "Net/NetMsgQueue.h"
-//#include "Net/NetServer.h"
+#include "NetMsgQueue.h"
+//#include "NetServer.h"
 
 
-namespace Net {
+namespace NETLIB_NAMESPACE {
 
 
 	// Forward declaration because Server depends itself on Connection

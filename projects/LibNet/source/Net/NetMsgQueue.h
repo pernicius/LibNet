@@ -1,11 +1,11 @@
 #pragma once
 
-#include "Net/NetCommon.h"
+#include "NetCommon.h"
 
-#include "Net/NetMessage.h"
+#include "NetMessage.h"
 
 
-namespace Net {
+namespace NETLIB_NAMESPACE {
 
 
 	class MsgQueue
